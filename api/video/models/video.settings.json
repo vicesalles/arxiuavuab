@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "videos",
+  "info": {
+    "name": "Video"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titol": {
+      "type": "string"
+    },
+    "descripcio": {
+      "type": "richtext"
+    },
+    "durada": {
+      "type": "integer"
+    },
+    "ruta": {
+      "type": "string"
+    },
+    "resolucio": {
+      "type": "enumeration",
+      "enum": [
+        "HD",
+        "SD",
+        "_4K",
+        "_720p"
+      ],
+      "default": "HD"
+    },
+    "realitzador": {
+      "model": "realitzador"
+    },
+    "unitat": {
+      "model": "unitat"
+    },
+    "tipus": {
+      "type": "enumeration",
+      "enum": [
+        "promocional",
+        "divulgatiu",
+        "institucional",
+        "projecte",
+        "encarrec_extern",
+        "NEO",
+        "_3Q",
+        "_50ANYS"
+      ]
+    },
+    "tamany": {
+      "type": "biginteger"
+    },
+    "Pumukit": {
+      "type": "string"
+    },
+    "Youtube": {
+      "type": "boolean"
+    },
+    "Id_youtube": {
+      "type": "string"
+    },
+    "data_arxiu": {
+      "type": "date"
+    },
+    "etiquetes": {
+      "type": "json"
+    },
+    "persones": {
+      "collection": "persona"
+    }
+  }
+}

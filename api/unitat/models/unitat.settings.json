@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "unitats",
+  "info": {
+    "name": "Unitat"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "capacitat": {
+      "type": "decimal"
+    },
+    "ip": {
+      "type": "biginteger"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

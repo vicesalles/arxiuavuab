@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "Persones",
+  "info": {
+    "name": "Persona"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Cognom": {
+      "type": "string"
+    },
+    "comentaris": {
+      "type": "richtext"
+    },
+    "Etiquetes": {
+      "type": "json"
+    }
+  }
+}

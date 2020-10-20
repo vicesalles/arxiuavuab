@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "realitzadors",
+  "info": {
+    "name": "Realitzador"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "correu": {
+      "type": "email"
+    }
+  }
+}

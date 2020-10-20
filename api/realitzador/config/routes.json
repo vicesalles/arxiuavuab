@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/realitzadors",
+      "handler": "realitzador.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/realitzadors/count",
+      "handler": "realitzador.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/realitzadors/:id",
+      "handler": "realitzador.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/realitzadors",
+      "handler": "realitzador.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/realitzadors/:id",
+      "handler": "realitzador.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/realitzadors/:id",
+      "handler": "realitzador.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
