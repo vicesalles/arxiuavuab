@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "realitzadors",
   "info": {
-    "name": "Realitzador"
+    "name": "Tecnic"
   },
   "options": {
     "increments": true,
