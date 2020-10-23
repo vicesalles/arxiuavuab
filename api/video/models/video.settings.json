@@ -27,8 +27,8 @@
       "enum": [
         "HD",
         "SD",
-        "_4K",
-        "_720p"
+        "4K",
+        "720p"
       ],
       "default": "HD"
     },
@@ -47,8 +47,8 @@
         "projecte",
         "encarrec_extern",
         "NEO",
-        "_3Q",
-        "_50ANYS"
+        "3Q",
+        "50ANYS"
       ]
     },
     "tamany": {

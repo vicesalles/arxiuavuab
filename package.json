@@ -1,8 +1,8 @@
 {
   "name": "arxiu",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "0.1.1",
+  "description": "Arxiu Audiovisual UAB",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -24,7 +24,7 @@
     "mysql": "latest"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Vice Sallés"
   },
   "strapi": {
     "uuid": "62918bdf-a7a5-4e94-a946-efc7f05000a1"
