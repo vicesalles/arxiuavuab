@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `realitzador` model.
+ * Lifecycle callbacks for the `tecnic` model.
  */
 
 module.exports = {

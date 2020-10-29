@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/realitzadors",
-      "handler": "realitzador.find",
+      "path": "/tecnics",
+      "handler": "tecnic.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/realitzadors/count",
-      "handler": "realitzador.count",
+      "path": "/tecnics/count",
+      "handler": "tecnic.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/realitzadors/:id",
-      "handler": "realitzador.findOne",
+      "path": "/tecnics/:id",
+      "handler": "tecnic.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/realitzadors",
-      "handler": "realitzador.create",
+      "path": "/tecnics",
+      "handler": "tecnic.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/realitzadors/:id",
-      "handler": "realitzador.update",
+      "path": "/tecnics/:id",
+      "handler": "tecnic.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/realitzadors/:id",
-      "handler": "realitzador.delete",
+      "path": "/tecnics/:id",
+      "handler": "tecnic.delete",
       "config": {
         "policies": []
       }

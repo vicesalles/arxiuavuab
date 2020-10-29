@@ -32,8 +32,8 @@
       ],
       "default": "HD"
     },
-    "realitzador": {
-      "model": "realitzador"
+    "tecnic": {
+      "model": "Tecnic"
     },
     "unitat": {
       "model": "unitat"

@@ -1,7 +1,7 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "realitzadors",
+  "collectionName": "tecnics",
   "info": {
     "name": "Tecnic"
   },
