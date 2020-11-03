@@ -33,7 +33,7 @@
       "default": "HD"
     },
     "tecnic": {
-      "model": "Tecnic"
+      "model": "tecnic"
     },
     "unitat": {
       "model": "unitat"
@@ -60,6 +60,10 @@
     },
     "Youtube": {
       "type": "boolean"
+    },
+    "esImatgeRecurs": {
+      "type": "boolean",
+      "default": false
     },
     "Id_youtube": {
       "type": "string"
