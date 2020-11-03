@@ -17,7 +17,8 @@
       "type": "biginteger"
     },
     "nom": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "url": {
       "type": "string"
