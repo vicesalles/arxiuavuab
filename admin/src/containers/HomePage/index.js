@@ -103,7 +103,7 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
          
               <Separator style={{ marginTop: 37, marginBottom: 36 }} />
               <div style={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between' }}>
-              <input style={{marginTop:'1em', marginBottom:"3px", paddingLeft:"0.5em", paddingTop:"0.5em", paddingBottom:"0.5em", fontSize:"1.3em"}} autoFocus={true} placeholder="Cerca un vídeo..." onChange={(e)=>updateCerca(e.target.value)} value={cerca} type="text"/><a href={`admin/plugins/content-manager/collectionType/application::video.video?_limit=10&_sort=titol%3AASC&_q=${cerca}`}>
+              <input style={{marginTop:'1em', marginBottom:"3px", paddingLeft:"0.5em", paddingTop:"0.5em", paddingBottom:"0.5em", fontSize:"1.3em"}} autoFocus={true} placeholder="Cerca un vídeo..." onChange={(e)=>updateCerca(e.target.value)} value={cerca} type="text"/><a href={`./plugins/content-manager/collectionType/application::video.video?_limit=10&_sort=titol%3AASC&_q=${cerca}`}>
                 <Button color="primary">Cerca</Button></a>
               <a style={{marginTop:'2em'}} href="./plugins/content-manager/collectionType/application::video.video/create"><Button color="success">Afegir un Vídeo Nou</Button></a>
               <a style={{marginTop:'1em'}} href="./plugins/content-manager/collectionType/application::persona.persona/create"><Button color="success">Afegir una Persona Nova</Button></a>       
