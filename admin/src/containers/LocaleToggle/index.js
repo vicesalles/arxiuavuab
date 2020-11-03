@@ -22,6 +22,8 @@ export class LocaleToggle extends React.Component {
 
   getFlagUrl = locale => {
     switch (locale) {
+      case 'ca':
+        return 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/flags/4x3/es-ct.svg';
       case 'en':
         return 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/flags/4x3/us.svg';
       case 'pt-BR':
