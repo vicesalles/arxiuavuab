@@ -265,7 +265,7 @@ export class Admin extends React.Component {
 Admin.defaultProps = {
   intl: {
     formatMessage: () => {},
-    locale: 'en',
+    locale: 'es',
   },
 };
 

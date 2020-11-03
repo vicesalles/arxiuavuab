@@ -4,15 +4,17 @@
  *
  */
 /* eslint-disable */
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { get, upperFirst } from 'lodash';
 import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
+import Button from '../../components/FullWidthButton';
+
+import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
 
 import useFetch from './hooks';
 import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
-import BlogPost from './BlogPost';
 import SocialLink from './SocialLink';
 
 const FIRST_BLOCK_LINKS = [
@@ -85,6 +87,8 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
         type: 'documentation',
       };
 
+  const [cerca,updateCerca] = useState("");
+
   return (
     <>
       <FormattedMessage id="HomePage.helmet.title">
@@ -93,121 +97,28 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
       <Container className="container-fluid">
         <div className="row">
           <div className="col-lg-8 col-md-12">
-            <Block>
-              <Wave />
-              <FormattedMessage
-                id={headerId}
-                values={{
-                  name: upperFirst(username),
-                }}
-              >
-                {msg => <h2 id="mainHeader">{msg}</h2>}
-              </FormattedMessage>
-              {hasAlreadyCreatedContentTypes ? (
-                <FormattedMessage id="app.components.HomePage.welcomeBlock.content.again">
-                  {msg => <P>{msg}</P>}
-                </FormattedMessage>
-              ) : (
-                <FormattedMessage id="HomePage.welcome.congrats">
-                  {congrats => {
-                    return (
-                      <FormattedMessage id="HomePage.welcome.congrats.content">
-                        {content => {
-                          return (
-                            <FormattedMessage id="HomePage.welcome.congrats.content.bold">
-                              {boldContent => {
-                                return (
-                                  <P>
-                                    <b>{congrats}</b>&nbsp;
-                                    {content}&nbsp;
-                                    <b>{boldContent}</b>
-                                  </P>
-                                );
-                              }}
-                            </FormattedMessage>
-                          );
-                        }}
-                      </FormattedMessage>
-                    );
-                  }}
-                </FormattedMessage>
-              )}
-              {hasAlreadyCreatedContentTypes && (
-                <div style={{ marginTop: isLoading ? 60 : 50 }}>
-                  {posts.map((post, index) => (
-                    <BlogPost
-                      {...post}
-                      key={post.link}
-                      isFirst={index === 0}
-                      isLoading={isLoading}
-                      error={error}
-                    />
-                  ))}
-                </div>
-              )}
-              <FormattedMessage id={linkProps.id}>
-                {msg => (
-                  <ALink
-                    rel="noopener noreferrer"
-                    {...linkProps}
-                    style={{ verticalAlign: ' bottom', marginBottom: 5 }}
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
+            <Block>           
+              <h2 id="mainHeader">Benvinguda a l'arxiu de la UAM</h2>
+              <P>Aquí podràs arxivar, trobar i editar tots els continguts videogràfics creats per la Unitat d'Audiovisuals i Multimèdia de l'Àrea de Comunicació</P>              
+         
               <Separator style={{ marginTop: 37, marginBottom: 36 }} />
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                {FIRST_BLOCK_LINKS.map((data, index) => {
-                  const type = index === 0 ? 'doc' : 'code';
-
-                  return (
-                    <LinkWrapper href={data.link} target="_blank" key={data.link} type={type}>
-                      <FormattedMessage id={data.titleId}>
-                        {title => <p className="bold">{title}</p>}
-                      </FormattedMessage>
-                      <FormattedMessage id={data.contentId}>
-                        {content => <p>{content}</p>}
-                      </FormattedMessage>
-                    </LinkWrapper>
-                  );
-                })}
+              <div style={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between' }}>
+              <input style={{marginTop:'1em', marginBottom:"3px", paddingLeft:"0.5em", paddingTop:"0.5em", paddingBottom:"0.5em", fontSize:"1.3em"}} autoFocus={true} placeholder="Cerca un vídeo..." onChange={(e)=>updateCerca(e.target.value)} value={cerca} type="text"/><a href={`admin/plugins/content-manager/collectionType/application::video.video?_limit=10&_sort=titol%3AASC&_q=${cerca}`}>
+                <Button color="primary">Cerca</Button></a>
+              <a style={{marginTop:'2em'}} href="./plugins/content-manager/collectionType/application::video.video/create"><Button color="success">Afegir un Vídeo Nou</Button></a>
+              <a style={{marginTop:'1em'}} href="./plugins/content-manager/collectionType/application::persona.persona/create"><Button color="success">Afegir una Persona Nova</Button></a>       
+            
               </div>
             </Block>
           </div>
 
           <div className="col-md-12 col-lg-4">
             <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
-              <FormattedMessage id="HomePage.community">{msg => <h2>{msg}</h2>}</FormattedMessage>
-              <FormattedMessage id="app.components.HomePage.community.content">
-                {content => <P style={{ marginTop: 7, marginBottom: 0 }}>{content}</P>}
-              </FormattedMessage>
-              <FormattedMessage id="HomePage.roadmap">
-                {msg => (
-                  <ALink
-                    rel="noopener noreferrer"
-                    href="https://portal.productboard.com/strapi/1-public-roadmap/tabs/2-under-consideration"
-                    target="_blank"
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
+              <h2>Ajuda</h2>
+              <p style={{paddingTop:"1em"}}>Mira aquest vídeo per veure com utilitzar l'arxiu de la UAM</p>              
 
               <Separator style={{ marginTop: 18 }} />
-              <div
-                className="row social-wrapper"
-                style={{
-                  display: 'flex',
-                  margin: 0,
-                  marginTop: 36,
-                  marginLeft: -15,
-                }}
-              >
-                {SOCIAL_LINKS.map((value, key) => (
-                  <SocialLink key={key} {...value} />
-                ))}
-              </div>
+            
             </Block>
           </div>
         </div>
