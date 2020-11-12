@@ -21,6 +21,10 @@
     },
     "Etiquetes": {
       "type": "json"
+    },
+    "videos": {
+      "via": "persones",
+      "collection": "video"
     }
   }
 }

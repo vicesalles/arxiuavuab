@@ -172,7 +172,7 @@ window.strapi = Object.assign(window.strapi || {}, {
     window.localStorage.getItem('strapi-admin-language') ||
     window.navigator.language ||
     window.navigator.userLanguage ||
-    'en',
+    'ca',
   lockApp,
   lockAppWithOverlay,
   unlockApp,

@@ -11,11 +11,10 @@ import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
 import Button from '../../components/FullWidthButton';
 
-import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
 
 import useFetch from './hooks';
 import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
-import SocialLink from './SocialLink';
+
 
 const FIRST_BLOCK_LINKS = [
   {
@@ -63,29 +62,6 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
       '/plugins/content-type-builder/content-types/plugins::users-permissions.user?modalType=contentType&kind=collectionType&actionType=create&settingType=base&forTarget=contentType&headerId=content-type-builder.modalForm.contentType.header-create&header_icon_isCustom_1=false&header_icon_name_1=contentType&header_label_1=null'
     );
   };
-  const hasAlreadyCreatedContentTypes =
-    get(plugins, ['content-manager', 'leftMenuSections', '0', 'links'], []).filter(
-      contentType => contentType.isDisplayed === true
-    ).length > 1;
-
-  const headerId = hasAlreadyCreatedContentTypes
-    ? 'HomePage.greetings'
-    : 'app.components.HomePage.welcome';
-  const username = get(auth.getUserInfo(), 'username', '');
-  const linkProps = hasAlreadyCreatedContentTypes
-    ? {
-        id: 'app.components.HomePage.button.blog',
-        href: 'https://strapi.io/blog/',
-        onClick: () => {},
-        type: 'blog',
-        target: '_blank',
-      }
-    : {
-        id: 'app.components.HomePage.create',
-        href: '',
-        onClick: handleClick,
-        type: 'documentation',
-      };
 
   const [cerca,updateCerca] = useState("");
 

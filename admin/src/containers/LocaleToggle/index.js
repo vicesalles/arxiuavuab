@@ -66,8 +66,7 @@ export class LocaleToggle extends React.Component {
       <Wrapper>
         <ButtonDropdown isOpen={this.state.isOpen} toggle={this.toggle}>
           <DropdownToggle className="localeDropdownContent">
-            <span>{locale}</span>
-            <img src={this.getFlagUrl(locale)} alt={locale} />
+            <span>{locale}</span>            
           </DropdownToggle>
 
           <DropdownMenu className={style}>

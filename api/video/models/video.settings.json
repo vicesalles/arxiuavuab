@@ -17,7 +17,7 @@
       "type": "richtext"
     },
     "durada": {
-      "type": "integer"
+      "type": "decimal"
     },
     "ruta": {
       "type": "string"
@@ -27,8 +27,7 @@
       "enum": [
         "HD",
         "SD",
-        "4K",
-        "720p"
+        "UHD"
       ],
       "default": "HD"
     },
@@ -47,13 +46,13 @@
         "projecte",
         "encarrec_extern",
         "NEO",
-        "3Q",
-        "50ANYS",
+        "_3Q",
+        "_50ANYS",
         "recurs"
       ]
     },
     "tamany": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "Pumukit": {
       "type": "string"
@@ -75,7 +74,9 @@
       "type": "json"
     },
     "persones": {
-      "collection": "persona"
+      "collection": "persona",
+      "via": "videos",
+      "dominant": true
     }
   }
 }
