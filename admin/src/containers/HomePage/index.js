@@ -68,22 +68,22 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
   return (
     <>
       <FormattedMessage id="HomePage.helmet.title">
-        {title => <PageTitle title={title} />}
+        {title => <PageTitle title={"Arxiu UAM"} />}
       </FormattedMessage>
       <Container className="container-fluid">
         <div className="row">
           <div className="col-lg-8 col-md-12">
-            <Block>           
+            <Block>
               <h2 id="mainHeader">Benvinguda a l'arxiu de la UAM</h2>
-              <P>Aquí podràs arxivar, trobar i editar tots els continguts videogràfics creats per la Unitat d'Audiovisuals i Multimèdia de l'Àrea de Comunicació</P>              
-         
+              <P>Aquí podràs arxivar, trobar i editar tots els continguts videogràfics creats per la Unitat d'Audiovisuals i Multimèdia de l'Àrea de Comunicació</P>
+
               <Separator style={{ marginTop: 37, marginBottom: 36 }} />
               <div style={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between' }}>
               <input style={{marginTop:'1em', marginBottom:"3px", paddingLeft:"0.5em", paddingTop:"0.5em", paddingBottom:"0.5em", fontSize:"1.3em"}} autoFocus={true} placeholder="Cerca un vídeo..." onChange={(e)=>updateCerca(e.target.value)} value={cerca} type="text"/><a href={`./plugins/content-manager/collectionType/application::video.video?_limit=10&_sort=titol%3AASC&_q=${cerca}`}>
                 <Button color="primary">Cerca</Button></a>
               <a style={{marginTop:'2em'}} href="./plugins/content-manager/collectionType/application::video.video/create"><Button color="success">Afegir un Vídeo Nou</Button></a>
-              <a style={{marginTop:'1em'}} href="./plugins/content-manager/collectionType/application::persona.persona/create"><Button color="success">Afegir una Persona Nova</Button></a>       
-            
+              <a style={{marginTop:'1em'}} href="./plugins/content-manager/collectionType/application::persona.persona/create"><Button color="success">Afegir una Persona Nova</Button></a>
+
               </div>
             </Block>
           </div>
@@ -91,10 +91,10 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
           <div className="col-md-12 col-lg-4">
             <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
               <h2>Ajuda</h2>
-              <p style={{paddingTop:"1em"}}>Mira aquest vídeo per veure com utilitzar l'arxiu de la UAM</p>              
+              <p style={{paddingTop:"1em"}}>Mira aquest vídeo per veure com utilitzar l'arxiu de la UAM</p>
 
               <Separator style={{ marginTop: 18 }} />
-            
+
             </Block>
           </div>
         </div>
