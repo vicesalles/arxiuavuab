@@ -3,11 +3,13 @@
   "connection": "default",
   "collectionName": "videos",
   "info": {
-    "name": "Video"
+    "name": "Video",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "titol": {
@@ -15,9 +17,6 @@
     },
     "descripcio": {
       "type": "richtext"
-    },
-    "durada": {
-      "type": "decimal"
     },
     "ruta": {
       "type": "string"
@@ -42,17 +41,14 @@
       "enum": [
         "promocional",
         "divulgatiu",
+        "educatiu",
         "institucional",
-        "projecte",
         "encarrec_extern",
         "NEO",
         "_3Q",
         "_50ANYS",
         "recurs"
       ]
-    },
-    "tamany": {
-      "type": "decimal"
     },
     "Pumukit": {
       "type": "string"
