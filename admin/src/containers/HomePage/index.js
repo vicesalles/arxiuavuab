@@ -91,7 +91,7 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
           <div className="col-md-12 col-lg-4">
             <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
               <h2>Ajuda</h2>
-              <p style={{paddingTop:"1em"}}>Mira aquest vídeo per veure com utilitzar l'arxiu de la UAM</p>
+              <p style={{paddingTop:"1em"}}>Mira <a href="https://www.youtube.com/watch?v=60f3yVE0_3c" target="_blank">aquest vídeo</a> per veure com utilitzar l'arxiu de la UAM</p>
 
               <Separator style={{ marginTop: 18 }} />
 
