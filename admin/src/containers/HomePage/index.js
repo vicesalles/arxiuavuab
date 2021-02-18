@@ -90,11 +90,19 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
 
           <div className="col-md-12 col-lg-4">
             <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
+              <h2>Noms d'arxius i carpetes</h2>
+              <p style={{paddingTop:"1em"}}>Recorda:</p>
+              <ul>
+                <li>No utilitzar espais en blanc.</li>
+                <li>No utilitzar accents.</li>
+                <li>No utilitzar símbols (?,!,€,@,#, etc.)</li>
+              </ul>      
+              <Separator style={{ marginTop: 18 }} />
+            </Block>
+            <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
               <h2>Ajuda</h2>
               <p style={{paddingTop:"1em"}}>Mira <a href="https://www.youtube.com/watch?v=60f3yVE0_3c" target="_blank">aquest vídeo</a> per veure com utilitzar l'arxiu de la UAM</p>
-
               <Separator style={{ marginTop: 18 }} />
-
             </Block>
           </div>
         </div>
